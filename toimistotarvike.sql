@@ -1,0 +1,44 @@
+-- LUONNOS
+
+-- create database toimistotarvike;
+-- use toimistotarvike;
+
+create table tuoteryhma (
+	trnro int primary key auto_increment,
+	trnimi varchar(30) not null,
+	constraint trnimi_uniikki unique (trnimi));
+
+create table tuote (
+	tuotenro int primary key auto_increment,
+	tuotenimi varchar(30) unique not null,
+	hinta decimal(5,2) not null,
+	trnro int not null,
+	constraint trnro_viite foreign key (trnro) references 	tuoteryhma (trnro));
+
+create table asiakas (
+	asnro int primary key auto_increment,
+	sukunimi varchar(30) not null,
+	etunimi varchar(30) not null,
+	email varchar(30) not null,
+	salasana varchar(30) not null,
+	lahiosoite varchar(30),
+	postinro char(5),
+	astili_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
+	constraint asnro_uniikki unique (asnro),
+	constraint email_uniikki unique (email));
+
+create table tilaus (
+	tilausnro int primary key auto_increment,
+	asnro int,
+	tilauspvm timestamp not null,
+	tila varchar(1),
+	constraint asnro_viite foreign key (asnro) references asiakas (asnro),
+	constraint tilausnro_uniikki unique (tilausnro));
+
+create table tilausrivi (
+	tilausnro int not null,
+	rivinro smallint not null,
+	tuotenro int,
+	kpl int not null,
+	constraint tilausrivi_perusavain primary key (tilausnro, rivinro),
+	constraint tuotenro_viite foreign key (tuotenro) references tuote (tuotenro));
