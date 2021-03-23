@@ -8,6 +8,10 @@ create table tuoteryhma (
 	trnimi varchar(30) not null,
 	constraint trnimi_uniikki unique (trnimi));
 
+	insert into tuoteryhma(trnimi) value ('elektroniikka');
+	insert into tuoteryhma(trnimi) value ('huonekalut');
+	insert into tuoteryhma(trnimi) value ('toimistotarvikkeet');
+
 create table tuote (
 	tuotenro int primary key auto_increment,
 	tuotenimi varchar(30) unique not null,
