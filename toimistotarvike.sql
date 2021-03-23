@@ -46,3 +46,13 @@ create table tilausrivi (
 	kpl int not null,
 	constraint tilausrivi_perusavain primary key (tilausnro, rivinro),
 	constraint tuotenro_viite foreign key (tuotenro) references tuote (tuotenro));
+
+create table yllapitaja (
+	yllnro int primary key auto_increment,
+	sukunimi varchar(30) not null,
+	etunimi varchar(30) not null,
+	email varchar(30) not null,
+	salasana varchar(30) not null,
+	tunnus_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
+	constraint yllnro_uniikki unique (yllnro),
+	constraint email_uniikki unique (email));
