@@ -1,7 +1,7 @@
--- LUONNOS
+drop database if exists toimistotarvike;
 
--- create database toimistotarvike;
--- use toimistotarvike;
+create database toimistotarvike;
+use toimistotarvike;
 
 create table tuoteryhma (
 	trnro int primary key auto_increment,
