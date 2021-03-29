@@ -19,6 +19,16 @@ create table tuote (
     kuvaus varchar(255),
 	trnro int not null,
 	constraint trnro_viite foreign key (trnro) references 	tuoteryhma (trnro));
+	
+	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro)
+	VALUES ("nitoja", 20, "Siisti ja helppokäyttöinen nitoja.", 3);
+
+	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro)
+	VALUES ("lehtikotelo", 5, "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3);
+
+	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro)
+	VALUES ("pöytälamppu", 30, "Hyvin valaiseva pöytälamppu.", 1);
+
 
 create table asiakas (
 	asnro int primary key auto_increment,
