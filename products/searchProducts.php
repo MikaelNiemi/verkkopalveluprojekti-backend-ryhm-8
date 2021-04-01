@@ -7,7 +7,7 @@ $search = filter_var($input->tuotenimi,FILTER_SANITIZE_STRING);
 
 try {
     $db = openDb();
-    selectAsJson($db,'SELECT * FROM tuote where tuotenimi LIKE "%' . $search . '%"');
+    selectAsJson($db,'SELECT tuotenimi, hinta, kuvaus, kuva, trnimi FROM tuote, tuoteryhma where tuoteryhma.trnro = tuote.trnro AND tuotenimi LIKE "%' . $search . '%"');
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);
