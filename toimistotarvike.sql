@@ -19,17 +19,16 @@ create table tuote (
 	image varchar(50),
     kuvaus varchar(255),
 	trnro int not null,
-	kuva varchar(255),
 	constraint trnro_viite foreign key (trnro) references 	tuoteryhma (trnro));
 	
-	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro, kuva)
-	VALUES ("nitoja", 20, "Siisti ja helppokäyttöinen nitoja.", 3, "nitoja.png");
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Nitoja", 20, "nitoja.png", "Siisti ja helppokäyttöinen nitoja.", 3);
 
-	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro, kuva)
-	VALUES ("lehtikotelo", 5, "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3, "lehtikotelo.png");
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Lehtikotelo", 5, "lehtikotelo.png", "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3);
 
-	INSERT INTO tuote (tuotenimi, hinta, kuvaus, trnro, kuva)
-	VALUES ("pöytälamppu", 30, "Hyvin valaiseva pöytälamppu.", 1, "poytalamppu.png");
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
 
 
 create table asiakas (
