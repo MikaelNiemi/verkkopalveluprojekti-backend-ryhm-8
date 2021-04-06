@@ -16,6 +16,7 @@ create table tuote (
 	tuotenro int primary key auto_increment,
 	tuotenimi varchar(30) unique not null,
 	hinta decimal(5,2) not null,
+	image varchar(50),
     kuvaus varchar(255),
 	trnro int not null,
 	constraint trnro_viite foreign key (trnro) references 	tuoteryhma (trnro));
