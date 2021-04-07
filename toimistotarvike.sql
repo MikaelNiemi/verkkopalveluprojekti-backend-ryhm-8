@@ -68,3 +68,6 @@ create table yllapitaja (
 	tunnus_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
 	constraint yllnro_uniikki unique (yllnro),
 	constraint email_uniikki unique (email));
+
+	INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
+	VALUES ("Meikäläinen", "Matti", "matti.yllapitaja@kauppa.fi", "matti75v");
