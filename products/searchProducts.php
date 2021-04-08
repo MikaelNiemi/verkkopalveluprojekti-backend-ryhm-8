@@ -2,12 +2,13 @@
 require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
-$input = json_decode(file_get_contents('php://input'));
-$search = filter_var($input->tuotenimi,FILTER_SANITIZE_STRING);
+$uri = parse_url(filter_input(INPUT_SERVER, 'PATH_INFO'),PHP_URL_PATH);
+$parameters = explode('/',$uri);
+$criteria = $parameters[1];
 
 try {
     $db = openDb();
-    selectAsJson($db,'SELECT tuotenimi, hinta, kuvaus, kuva, trnimi FROM tuote, tuoteryhma where tuoteryhma.trnro = tuote.trnro AND tuotenimi LIKE "%' . $search . '%"');
+    selectAsJson($db,"SELECT tuotenimi, hinta, kuvaus, image, trnimi FROM tuote, tuoteryhma where tuoteryhma.trnro = tuote.trnro AND (tuotenimi LIKE '%$criteria%' OR trnimi LIKE '%$criteria%')");
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);

@@ -28,7 +28,7 @@ create table tuote (
 	VALUES ("Lehtikotelo", 5, "lehtikotelo.png", "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
+	VALUES ("Pöytälamppu", 30, "poytalamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
 
 
 create table asiakas (
