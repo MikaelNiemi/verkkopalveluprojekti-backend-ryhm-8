@@ -8,13 +8,16 @@
   $salasana = filter_input(INPUT_POST,"salasana", FILTER_SANITIZE_STRING);
   $postinro = filter_input(INPUT_POST, "postinro", FILTER_SANITIZE_NUMBER_INT);
   $lahiosoite = filter_input(INPUT_POST, "lahiosoite", FILTER_SANITIZE_STRING);
-  // $salasanahash=hash("sha256", $salasana);
+   $salasanahash=hash("sha256", $salasana);
+   $salasana = $salasanahash;
+   
   // $salasana2 = filter_input(INPUT_POST, "salasana2", FILTER_SANITIZE_STRING);
 
 try {
   $db = openDb();
-  selectAsJson($db," INSERT INTO asiakas (sukunimi,etunimi,email,salasana,postinro,lahiosoite)  VALUES ('$sukunimi','$etunimi','$email','$salasana','$postinro','$lahiosoite')");
+  selectAsJson($db," INSERT INTO asiakas (sukunimi,etunimi,email,salasana,postinro,lahiosoite) VALUES ('$sukunimi','$etunimi','$email','$salasana','$postinro','$lahiosoite')");
 
+  print "<p>onnistu</p>";
 
 } catch (PDOException $pdoex) {
     returnError($pdoex);
