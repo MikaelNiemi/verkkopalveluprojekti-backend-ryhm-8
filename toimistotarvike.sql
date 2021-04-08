@@ -64,10 +64,10 @@ create table yllapitaja (
 	sukunimi varchar(30) not null,
 	etunimi varchar(30) not null,
 	email varchar(30) not null,
-	salasana varchar(30) not null,
+	salasana varchar(100) not null,
 	tunnus_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
 	constraint yllnro_uniikki unique (yllnro),
 	constraint email_uniikki unique (email));
 
 	INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
-	VALUES ("Meikäläinen", "Matti", "matti.yllapitaja@kauppa.fi", "matti75v");
+	VALUES ("Meikäläinen", "Matti", "matti.yllapitaja@kauppa.fi", "5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46");

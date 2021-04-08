@@ -2,8 +2,8 @@
 require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
-$email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_STRING);
-$salasana = filter_input(INPUT_POST,"salasana",FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST,"yll_email",FILTER_SANITIZE_STRING);
+$salasana = filter_input(INPUT_POST,"yll_salasana",FILTER_SANITIZE_STRING);
 $salasanahash = hash("sha256", $salasana);
 
 try {
@@ -13,3 +13,5 @@ try {
 } catch (PDOException $pdoex) {
     returnError($pdoex);
 }
+
+// passw: matti75v
