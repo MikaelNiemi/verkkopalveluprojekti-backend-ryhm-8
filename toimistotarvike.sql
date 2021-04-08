@@ -36,7 +36,7 @@ create table asiakas (
 	sukunimi varchar(30) not null,
 	etunimi varchar(30) not null,
 	email varchar(30) not null,
-	salasana varchar(30) not null,
+	salasana varchar(100) not null,
 	lahiosoite varchar(30),
 	postinro char(5),
 	astili_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
