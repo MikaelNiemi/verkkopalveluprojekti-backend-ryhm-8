@@ -28,8 +28,17 @@ create table tuote (
 	VALUES ("Lehtikotelo", 5, "lehtikotelo.png", "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Pöytälamppu", 30, "poytalamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
+	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
 
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Webkamera Musta", 24.90, "webkamera-musta.png", "Musta web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Webkamera Punainen", 24.90, "webkamera-punainen.png", "Punainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Webkamera Kultainen", 24.90, "webkamera-kultainen.png", "Kultainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Webkamera Sininen", 24.90, "webkamera-sininen.png", "Sininen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	
 
 create table asiakas (
 	asnro int primary key auto_increment,
