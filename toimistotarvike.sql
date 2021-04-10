@@ -39,6 +39,11 @@ create table tuote (
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 	VALUES ("Webkamera Sininen", 24.90, "webkamera-sininen.png", "Sininen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
 	
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Työtuoli", 49.50, "työtuoli.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla. Säädettävä istuinkorkeus.", 2);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Työtuoli käsinojilla", 59.50, "työtuoli-nojilla.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla ja tukevilla käsinojilla. Säädettävä istuinkorkeus.", 2);
+	
 
 create table asiakas (
 	asnro int primary key auto_increment,
