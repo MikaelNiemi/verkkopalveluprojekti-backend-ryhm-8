@@ -31,18 +31,18 @@ create table tuote (
 	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Webkamera Musta", 24.90, "webkamera-musta.png", "Musta web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	VALUES ("Webkamera Musta", 24.90, "webkamera_musta.png", "Musta web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Webkamera Punainen", 24.90, "webkamera-punainen.png", "Punainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	VALUES ("Webkamera Punainen", 24.90, "webkamera_punainen.png", "Punainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Webkamera Kultainen", 24.90, "webkamera-kultainen.png", "Kultainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	VALUES ("Webkamera Kultainen", 24.90, "webkamera_kultainen.png", "Kultainen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Webkamera Sininen", 24.90, "webkamera-sininen.png", "Sininen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
+	VALUES ("Webkamera Sininen", 24.90, "webkamera_sininen.png", "Sininen web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
 	
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Työtuoli", 49.50, "työtuoli.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla. Säädettävä istuinkorkeus.", 2);
+	VALUES ("Työtuoli", 49.50, "työtuoli_nojaton.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla. Säädettävä istuinkorkeus.", 2);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Työtuoli käsinojilla", 59.50, "työtuoli-nojilla.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla ja tukevilla käsinojilla. Säädettävä istuinkorkeus.", 2);
+	VALUES ("Työtuoli käsinojilla", 59.50, "työtuoli_nojilla.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla ja tukevilla käsinojilla. Säädettävä istuinkorkeus.", 2);
 	
 
 create table asiakas (
