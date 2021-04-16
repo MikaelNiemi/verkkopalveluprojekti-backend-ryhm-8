@@ -16,8 +16,9 @@ try {
     $kysely->bindValue(':tuotenro',$tuotenro,PDO::PARAM_INT);
     $kysely->bindValue(':tuotenimi',$tuotenimi,PDO::PARAM_STR);
     $kysely->bindValue(':hinta',$hinta,PDO::PARAM_STR);
-    $kysely->bindValue(':kustannus',$kustannus,PDO::PARAM_STR);
+    $kysely->bindValue(':kuvaus',$kuvaus,PDO::PARAM_STR);
     $kysely->bindValue(':trnro',$trnro,PDO::PARAM_INT);
+    $kysely->execute();
     
     // selectAsJson($db,"UPDATE tuote SET tuotenimi = '$tuotenimi', hinta = '$hinta', kuvaus = '$kuvaus', trnro = '$trnro' WHERE tuotenro = '$tuotenro'");
 
