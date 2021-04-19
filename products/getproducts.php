@@ -8,7 +8,7 @@ $tuoteryhma_trnro = $parameters[1];
 
 try {
     $db = openDb();
-    selectAsJson($db,"select * from tuote where trnro = $tuoteryhma_trnro");
+    selectAsJson($db,"select * from tuote where trnro = '$tuoteryhma_trnro'");
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);
