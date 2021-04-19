@@ -8,7 +8,7 @@ $criteria = $parameters[1];
 
 try {
     $db = openDb();
-    selectAsJson($db,"SELECT tuotenimi, hinta, kuvaus, image, trnimi FROM tuote, tuoteryhma where tuoteryhma.trnro = tuote.trnro AND (tuotenimi LIKE '%$criteria%' OR trnimi LIKE '%$criteria%')");
+    selectAsJson($db,"SELECT tuotenro, tuotenimi, hinta, kuvaus, image, trnimi, tuote.trnro FROM tuote, tuoteryhma where tuoteryhma.trnro = tuote.trnro AND (tuotenimi LIKE '%$criteria%' OR trnimi LIKE '%$criteria%')");
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);
