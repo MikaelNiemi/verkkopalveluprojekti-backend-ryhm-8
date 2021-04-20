@@ -1,5 +1,3 @@
-<!-- yll_passw: matti75v -->
-
 <?php
 session_start();
 require_once '../inc/functions.php';
