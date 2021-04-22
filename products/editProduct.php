@@ -10,7 +10,19 @@ $trnro=filter_input(INPUT_POST,'trnro',FILTER_SANITIZE_NUMBER_INT);
 
 try {
     $db = openDb();
-    selectAsJson($db,"UPDATE tuote SET tuotenimi = '$tuotenimi', hinta = '$hinta', kuvaus = '$kuvaus', trnro = '$trnro' WHERE tuotenro = '$tuotenro'");
+    
+    $kysely = $db->prepare("UPDATE tuote SET tuotenimi = :tuotenimi, hinta = :hinta, kuvaus = :kuvaus, trnro = :trnro WHERE tuotenro = :tuotenro");
+    
+    $kysely->bindValue(':tuotenro',$tuotenro,PDO::PARAM_INT);
+    $kysely->bindValue(':tuotenimi',$tuotenimi,PDO::PARAM_STR);
+    $kysely->bindValue(':hinta',$hinta,PDO::PARAM_STR);
+    $kysely->bindValue(':kuvaus',$kuvaus,PDO::PARAM_STR);
+    $kysely->bindValue(':trnro',$trnro,PDO::PARAM_INT);
+    $kysely->execute();
+    
+
+    header("Location: http://localhost:3000/MuokkaaTuotteita");
+    exit();
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);
