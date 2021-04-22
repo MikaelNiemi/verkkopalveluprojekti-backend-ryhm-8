@@ -28,7 +28,20 @@ create table tuote (
 	VALUES ("Lehtikotelo", 5, "lehtikotelo.png", "Tilava ja hyvälaatuinen kotelo papereille ja lehdille.", 3);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu, joka sopii jokaiseen toimistoon.", 1);
+	VALUES ("Kansiot 3 kpl, väri", 12.90, "kansiot_väri.png", "Kolme kappaletta muovisia kansioita paperiarkkien lajitteluun ja talletukseen. Värejä harmaa, sininen ja punainen.", 3);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Kansiot 3 kpl, musta", 12.90, "kansiot_musta.png", "Kolme kappaletta muovisia kansioita paperiarkkien lajitteluun ja talletukseen. Väri musta.", 3);
+
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Rei'itin Musta", 24.90, "reiitin_musta.png", "Tehokas ja kestävä musta rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Rei'itin Valkoinen", 24.90, "reiitin_valkoinen.png", "Tehokas ja kestävä valkoinen rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Rei'itin Punainen", 24.90, "reiitin_punainen.png", "Tehokas ja kestävä punainen rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	
+
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Pöytälamppu", 30, "pöytälamppu.png", "Hyvin valaiseva pöytälamppu.", 1);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 	VALUES ("Webkamera Musta", 24.90, "webkamera_musta.png", "Musta web-kamera sisäisellä mikrofonilla. Kiinnitys kannettavan näyttöön ja litteille alustoille.", 1);
@@ -43,6 +56,20 @@ create table tuote (
 	VALUES ("Työtuoli", 49.50, "työtuoli_nojaton.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla. Säädettävä istuinkorkeus.", 2);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 	VALUES ("Työtuoli käsinojilla", 59.50, "työtuoli_nojilla.png", "Tyylikäs työtuoli ilmavalla verkkoselkänojalla ja tukevilla käsinojilla. Säädettävä istuinkorkeus.", 2);
+	
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Työpöytä Valkoinen", 299.90, "työpöytä_valkoinen.png", "Yksinkertainen, mutta kaunis valkoinen pöytä työskentelynurkkaukseen. Pöytä on rakenteeltaan tukeva ja takalevy siisti, joten se sopii erinomaisesti myös tilanjakajaksi. ", 2);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Työpöytä Musta", 299.90, "työpöytä_musta.png", "Yksinkertainen, mutta kaunis musta pöytä työskentelynurkkaukseen. Pöytä on rakenteeltaan tukeva ja takalevy siisti, joten se sopii erinomaisesti myös tilanjakajaksi. ", 2);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Työpöytä Ruskea", 299.90, "työpöytä_ruskea.png", "Yksinkertainen, mutta kaunis ruskea pöytä työskentelynurkkaukseen. Pöytä on rakenteeltaan tukeva ja takalevy siisti, joten se sopii erinomaisesti myös tilanjakajaksi. ", 2);
+
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Arkistokaappi Valkoinen", 89.90, "arkistokaappi_valkoinen.png", "Valkoinen arkistokaappi. Riippukansiolaatikot helpottavat papereiden lajittelua ja säilytystä. Laatikoissa olevien pysäyttimien ansiosta laatikot eivät putoa kiskoiltaan.", 2);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Arkistokaappi Musta", 89.90, "arkistokaappi_musta.png", "Musta arkistokaappi. Riippukansiolaatikot helpottavat papereiden lajittelua ja säilytystä. Laatikoissa olevien pysäyttimien ansiosta laatikot eivät putoa kiskoiltaan.", 2);
+	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Arkistokaappi Ruskea", 89.90, "arkistokaappi_ruskea.png", "Ruskea arkistokaappi. Riippukansiolaatikot helpottavat papereiden lajittelua ja säilytystä. Laatikoissa olevien pysäyttimien ansiosta laatikot eivät putoa kiskoiltaan.", 2);
 	
 
 create table asiakas (
