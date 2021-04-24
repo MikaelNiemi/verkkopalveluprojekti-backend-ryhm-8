@@ -20,7 +20,6 @@ try {
     $kysely->bindValue(':trnro',$trnro,PDO::PARAM_INT);
     $kysely->execute();
     
-    // selectAsJson($db,"UPDATE tuote SET tuotenimi = '$tuotenimi', hinta = '$hinta', kuvaus = '$kuvaus', trnro = '$trnro' WHERE tuotenro = '$tuotenro'");
 
     header("Location: http://localhost:3000/MuokkaaTuotteita");
     exit();
