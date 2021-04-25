@@ -12,7 +12,7 @@ if (isset($_FILES['file'])) {
         $filename = $_FILES['file']['name'];
         $type = $_FILES['file']['type'];
         if ($type === 'image/png') {
-            $path = "img/" . basename($filename);
+            $path = "../img/" . basename($filename);
             if (move_uploaded_file($_FILES['file']['tmp_name'],$path)) {
                 $db = openDb();
 
