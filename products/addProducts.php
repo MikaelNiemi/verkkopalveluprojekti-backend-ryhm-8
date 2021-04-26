@@ -12,7 +12,7 @@ if (isset($_FILES['file'])) {
         $filename = $_FILES['file']['name'];
         $type = $_FILES['file']['type'];
         if ($type === 'image/png') {
-            $path = "img/" . basename($filename);
+            $path = "../img/" . basename($filename);
             if (move_uploaded_file($_FILES['file']['tmp_name'],$path)) {
                 $db = openDb();
 
@@ -27,7 +27,6 @@ if (isset($_FILES['file'])) {
                 $post->execute();
 
                 $newId = $db->lastInsertId();
-                header("Location: http://localhost:3000/LisaaTuote");
             } else {
                 returnError("Tiedoston tallentaminen img-kansioon epäonnistui");
             }
@@ -38,3 +37,5 @@ if (isset($_FILES['file'])) {
         returnError("Kuvaa ei voitu ladata selaimelta");
     }
 }
+
+// header("Location: http://localhost:3000/LisaaTuote");
