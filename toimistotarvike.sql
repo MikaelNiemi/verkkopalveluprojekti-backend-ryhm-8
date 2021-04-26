@@ -33,11 +33,11 @@ create table tuote (
 	VALUES ("Kansiot 3 kpl, musta", 12.90, "kansiot_musta.png", "Kolme kappaletta muovisia kansioita paperiarkkien lajitteluun ja talletukseen. Väri musta.", 3);
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Rei'itin Musta", 24.90, "reiitin_musta.png", "Tehokas ja kestävä musta rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	VALUES ("Lävistin Musta", 24.90, "reiitin_musta.png", "Tehokas ja kestävä musta lävistin, jolla voi lävistää paksunkin paperinipun yhdellä painalluksella.", 3);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Rei'itin Valkoinen", 24.90, "reiitin_valkoinen.png", "Tehokas ja kestävä valkoinen rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	VALUES ("Lävistin Valkoinen", 24.90, "reiitin_valkoinen.png", "Tehokas ja kestävä valkoinen lävistin, jolla voi lävistää paksunkin paperinipun yhdellä painalluksella.", 3);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
-	VALUES ("Rei'itin Punainen", 24.90, "reiitin_punainen.png", "Tehokas ja kestävä punainen rei'itin, jolla voi rei’ittää paksunkin paperinipun yhdellä painalluksella.", 3);
+	VALUES ("Lävistin Punainen", 24.90, "reiitin_punainen.png", "Tehokas ja kestävä punainen lävistin, jolla voi lävistää paksunkin paperinipun yhdellä painalluksella.", 3);
 	
 
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
