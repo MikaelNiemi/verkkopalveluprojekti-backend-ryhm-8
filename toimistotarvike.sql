@@ -113,4 +113,7 @@ create table yllapitaja (
 	INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
 	VALUES ("Meikäläinen", "Matti", "matti.yllapitaja@kauppa.fi", "5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46");
    
-   insert into asiakas (sukunimi, etunimi, email, salasana, lahiosoite, postinro) values ("sukunimi","etunimi","post@post.com","5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46", "osoite 1","12345")
+   insert into asiakas (sukunimi, etunimi, email, salasana, lahiosoite, postinro) values ("sukunimi","etunimi","post@post.com","5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46", "osoite 1","12345");
+   INSERT INTO tilaus (asnro, tila) VALUES (1, 'U');
+   INSERT INTO tilausrivi (tilausnro, rivinro, tuotenro, kpl) VALUES (1,1,1,12);
+INSERT INTO tilausrivi (tilausnro, rivinro, tuotenro, kpl) VALUES (1,2,3,5);

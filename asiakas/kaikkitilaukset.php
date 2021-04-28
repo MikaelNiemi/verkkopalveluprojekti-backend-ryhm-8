@@ -4,7 +4,7 @@ require_once '../inc/headers.php';
 
 try {
     $db = openDb();
-    selectAsJson($db,"SELECT asnro, tilausrivi.tilausnro, rivinro, tilausrivi.tuotenro, tuotenimi, kpl, tapa, tila, tilauspvm
+    selectAsJson($db,"SELECT asnro, tilausrivi.tilausnro, rivinro, tilausrivi.tuotenro, tuotenimi, kpl, tila, tilauspvm
                         FROM tilaus, tilausrivi, tuote
                         WHERE tilaus.tilausnro = tilausrivi.tilausnro AND tilausrivi.tuotenro = tuote.tuotenro");
    
