@@ -21,6 +21,9 @@ $sql = "SELECT * FROM asiakas WHERE email = '$email'";
                 'sukunimi' => $asiakas->sukunimi,
                 'etunimi' => $asiakas->etunimi,
                 'asnro' => $asiakas->asnro,
+                'email' => $asiakas->email,
+                'lahiosoite' => $asiakas->lahiosoite,
+                'postinro' => $asiakas->postinro,
             );
             $_SESSION['asiakas'] = $asiakas;
         } else {
