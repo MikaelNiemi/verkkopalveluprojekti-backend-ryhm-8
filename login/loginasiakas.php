@@ -7,7 +7,7 @@ $email=filter_input(INPUT_POST,"email",FILTER_SANITIZE_STRING);
 $salasana=filter_input(INPUT_POST,"salasana",FILTER_SANITIZE_STRING);
 $salasanahash=hash("sha256", $salasana);
 
-$sql = "SELECT * FROM asiakas WHERE email = '$email'";
+$sql = "SELECT * FROM asiakas WHERE email = '$email' AND salasana IS NOT NULL";
 
  try {
      $db = openDb();
@@ -21,6 +21,9 @@ $sql = "SELECT * FROM asiakas WHERE email = '$email'";
                 'sukunimi' => $asiakas->sukunimi,
                 'etunimi' => $asiakas->etunimi,
                 'asnro' => $asiakas->asnro,
+                'lahiosoite' => $asiakas->lahiosoite,
+                'email' => $asiakas->email,
+                'postinro' => $asiakas->postinro
             );
             $_SESSION['asiakas'] = $asiakas;
         } else {
