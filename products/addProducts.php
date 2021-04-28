@@ -27,7 +27,6 @@ if (isset($_FILES['file'])) {
                 $post->execute();
 
                 $newId = $db->lastInsertId();
-                header("Location: http://localhost:3000/LisaaTuote");
             } else {
                 returnError("Tiedoston tallentaminen img-kansioon epäonnistui");
             }
@@ -38,3 +37,5 @@ if (isset($_FILES['file'])) {
         returnError("Kuvaa ei voitu ladata selaimelta");
     }
 }
+
+// header("Location: http://localhost:3000/LisaaTuote");

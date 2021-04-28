@@ -70,19 +70,19 @@ create table tuote (
 	VALUES ("Arkistokaappi Musta", 89.90, "arkistokaappi_musta.png", "Musta arkistokaappi. Riippukansiolaatikot helpottavat papereiden lajittelua ja säilytystä. Laatikoissa olevien pysäyttimien ansiosta laatikot eivät putoa kiskoiltaan.", 2);
 	INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 	VALUES ("Arkistokaappi Ruskea", 89.90, "arkistokaappi_ruskea.png", "Ruskea arkistokaappi. Riippukansiolaatikot helpottavat papereiden lajittelua ja säilytystä. Laatikoissa olevien pysäyttimien ansiosta laatikot eivät putoa kiskoiltaan.", 2);
-	
+
 
 create table asiakas (
 	asnro int primary key auto_increment,
 	sukunimi varchar(30) not null,
 	etunimi varchar(30) not null,
-	email varchar(30) not null,
-	salasana varchar(100) not null,
+	email varchar(30),
+	salasana varchar(100),
 	lahiosoite varchar(30),
 	postinro char(5),
 	astili_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
-	constraint asnro_uniikki unique (asnro),
-	constraint email_uniikki unique (email));
+	-- constraint email_uniikki unique (email),
+	constraint asnro_uniikki unique (asnro));
 
 create table tilaus (
 	tilausnro int primary key auto_increment,
@@ -112,3 +112,5 @@ create table yllapitaja (
 
 	INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
 	VALUES ("Meikäläinen", "Matti", "matti.yllapitaja@kauppa.fi", "5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46");
+   
+   insert into asiakas (sukunimi, etunimi, email, salasana, lahiosoite, postinro) values ("sukunimi","etunimi","post@post.com","5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46", "osoite 1","12345")
