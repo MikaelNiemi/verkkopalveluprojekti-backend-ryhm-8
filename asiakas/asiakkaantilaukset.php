@@ -2,14 +2,16 @@
 require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
-$asnro=filter_input(INPUT_POST,"asnro",FILTER_SANITIZE_NUMBER_INT);
+$uri = parse_url(filter_input(INPUT_SERVER, 'PATH_INFO'),PHP_URL_PATH);
+$parameters = explode('/',$uri);
+$asnro = $parameters[1];
+
 
 try {
     $db = openDb();
     selectAsJson($db,"SELECT tilausrivi.tilausnro, tuotenimi, tilausrivi.kpl
-                        FROM tilausrivi, tuote
-                        WHERE tilausrivi.tuotenro = tuote.tuotenro AND asnro='$asnro'
-                        GROUP BY tilausnro, tuotenimi");
+    FROM tilausrivi, tuote, tilaus
+    WHERE tilausrivi.tuotenro = tuote.tuotenro AND tilausrivi.tilausnro = tilaus.tilausnro AND asnro = '$asnro'");
    
 }
 catch (PDOException $pdoex) {
