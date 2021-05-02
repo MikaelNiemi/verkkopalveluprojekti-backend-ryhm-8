@@ -28,14 +28,12 @@ if (isset($_FILES['file'])) {
 
                 $newId = $db->lastInsertId();
             } else {
-                returnError("Tiedoston tallentaminen img-kansioon epäonnistui");
+                echo json_encode("Tiedoston tallentaminen img-kansioon epäonnistui");
             }
         } else {
-            returnError("Kuvan tyyppi virheellinen");
+            echo json_encode("Kuvan tyyppi virheellinen");
         }
     } else {
-        returnError("Kuvaa ei voitu ladata selaimelta");
+        echo json_encode("Kuvaa ei voitu ladata selaimelta");
     }
 }
-
-// header("Location: http://localhost:3000/LisaaTuote");
